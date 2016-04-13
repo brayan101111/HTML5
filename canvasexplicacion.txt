@@ -1,0 +1,50 @@
+canvas sirve para hacer animaciones flash  y dibujar dinamicamente animaciones flash
+canvas se hace con estructura javascript
+http://www.desarrolloweb.com/manuales/manual-canvas-html5.html
+canvas significa lienzo e sun area donde podemos dibujar
+con canvas es posible hacer en html5 lo que solo estaba reservado para animadores flash
+es soportado en opera firefox y chrome
+fue creado por apple ademas de dibujar puede actualizar dinamicamente los dibujos
+
+
+
+
+PRIMER PASO
+<canvas id="micanvas" width="200" height="100">
+Este texto se muestra para los navegadores no compatibles con canvas.
+<br>
+Por favor, utiliza Firefox, Chrome, Safari u Opera.
+</canvas>
+
+Atributo id:
+Para asignarle un nombre único y luego referirnos a este canvas desde Javascript. 
+Atributos width y height:
+Para indicar la anchura y altura del área del canvas
+se pueden asignar mas atributos como por ejemplo Style para las hojas de estilo
+SEGUNDO PASO
+//Recibimos el elemento canvas
+var canvas = document.getElementById('micanvas');
+
+//Accedo al contexto de '2d' de este canvas, necesario para dibujar
+var contexto = canvas.getContext('2d');
+
+//Dibujo en el contexto del canvas
+contexto.fillRect(50, 0, 10, 150); 
+otro ejemplo mas estructurado  para  definir si es compatible o no con le navegador
+//Recibimos el elemento canvas
+var elemento = document.getElementById('micanvas');
+//Comprobación sobre si encontramos un elemento
+//y podemos extraer su contexto con getContext(), que indica compatibilidad con canvas
+if (elemento && elemento.getContext) {
+   //Accedo al contexto de '2d' de este canvas, necesario para dibujar
+   var contexto = elemento.getContext('2d');
+   if (contexto) {
+      //Si tengo el contexto 2d es que todo ha ido bien y puedo empezar a dibujar
+      //Comienzo dibujando un rectángulo
+      contexto.fillRect(0, 0, 150, 100);
+      //cambio el color de estilo de dibujo a rojo
+      contexto.fillStyle = '#cc0000';
+      //dibujo otro rectángulo
+      contexto.fillRect(10, 10, 100, 70);
+   }
+} 
