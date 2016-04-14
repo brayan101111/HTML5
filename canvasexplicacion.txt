@@ -5,6 +5,7 @@ canvas significa lienzo e sun area donde podemos dibujar
 con canvas es posible hacer en html5 lo que solo estaba reservado para animadores flash
 es soportado en opera firefox y chrome
 fue creado por apple ademas de dibujar puede actualizar dinamicamente los dibujos
+http://www.aulaclic.es/articulos/canvas_3.html
 
 
 
